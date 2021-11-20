@@ -49,11 +49,11 @@ class User extends Authenticatable
 
     public function comments()
     {
-        return $this->belongsToMany(Comment::class, 'comments', 'user_id', 'design_id');
+        return $this->hasMany(Comment::class);
     }
 
     public function transactions()
     {
-        return $this->belongsToMany(Transaction::class, 'transactions', 'user_id', 'design_id');
+        return $this->hasMany(Transaction::class);
     }
 }

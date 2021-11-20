@@ -9,8 +9,13 @@ class Comment extends Model
 {
     use HasFactory;
 
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany(User::class, 'comments', 'design_id', 'user_id');
+        return $this->belongsTo(User::class);
+    }
+
+    public function design()
+    {
+        return $this->belongsTo(Design::class);
     }
 }

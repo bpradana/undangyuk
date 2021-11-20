@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DesignController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index', ['title' => 'Home']);
 });
+
+Route::get('/designs', [DesignController::class, 'index']);
+Route::get('/design/{id}', [DesignController::class, 'show']);
