@@ -2,6 +2,10 @@
 
 @section('content')
 
-<h2>Welcome to UndangYuk!</h2>
+@auth
+    <h2>Welcome back, {{ auth()->user()->name }}</h2>
+@else
+    <h2>Welcome to UndangYuk!</h2>
+@endauth
 
 @endsection
