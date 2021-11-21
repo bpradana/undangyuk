@@ -19,12 +19,20 @@ Route::get('/', function () {
     return view('index', ['title' => 'Home']);
 });
 
-Route::get('/designs', [DesignController::class, 'index']);
-Route::get('/design/{id}', [DesignController::class, 'show']);
+Route::get('/designs', [DesignController::class, 'indexAll']);
+Route::get('/design/{design}', [DesignController::class, 'show']);
+Route::get('/create-design', [DesignController::class, 'create'], ['middleware' => 'auth']);
+Route::post('/create-design', [DesignController::class, 'store'], ['middleware' => 'auth']);
+Route::get('/edit-design/{design}', [DesignController::class, 'edit'], ['middleware' => 'auth']);
+Route::post('/edit-design/{design}', [DesignController::class, 'update'], ['middleware' => 'auth']);
+Route::delete('/delete-design/{design}', [DesignController::class, 'destroy'], ['middleware' => 'auth']);
+
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::post('/logout', [LoginController::class, 'logout'], ['middleware' => 'auth']);
+
+Route::get('/profile', [DesignController::class, 'index'], ['middleware' => 'auth']);

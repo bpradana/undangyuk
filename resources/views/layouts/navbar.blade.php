@@ -8,7 +8,7 @@
         </li>
         @auth
             <li>
-                <a>{{ auth()->user()->name }}</a>
+                <a href='/profile'>{{ auth()->user()->name }}</a>
             </li>
             <form action="/logout" method="post">
                 @csrf

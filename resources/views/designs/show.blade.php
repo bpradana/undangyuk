@@ -9,6 +9,15 @@
 <p>By: {{ $design->user->name }}</p>
 <p>Created at: {{ $design->created_at }}</p>
 
+@if ($design->user->id == auth()->user()->id)
+    <a href="/edit-design/{{ $design->id }}">Edit</a>
+    <form action="/delete-design/{{ $design->id }}" method="post">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Delete</button>
+    </form>
+@endif
+
 <h2>Comments:</h2>
 @foreach ($design->comments as $comment)
     <h3>{{ $comment->title }}</h3>

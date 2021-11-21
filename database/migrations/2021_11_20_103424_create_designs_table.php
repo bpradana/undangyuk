@@ -19,7 +19,7 @@ class CreateDesignsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->integer('price');
-            $table->float('rating', 2, 1);
+            $table->float('rating', 2, 1)->default(0);
             $table->timestamps();
         });
     }
