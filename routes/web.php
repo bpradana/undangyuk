@@ -5,6 +5,7 @@ use App\Http\Controllers\DesignController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,3 +43,6 @@ Route::get('/transactions', [TransactionController::class, 'index'], ['middlewar
 Route::get('/create-transaction/{design}', [TransactionController::class, 'create'], ['middleware' => 'auth']);
 Route::get('/pay-transaction/{transaction}', [TransactionController::class, 'pay'], ['middleware' => 'auth']);
 Route::delete('/delete-transaction/{transaction}', [TransactionController::class, 'destroy'], ['middleware' => 'auth']);
+
+Route::post('/create-comment/{design}', [CommentController::class, 'create'], ['middleware' => 'auth']);
+Route::delete('/delete-comment/{comment}', [CommentController::class, 'destroy'], ['middleware' => 'auth']);

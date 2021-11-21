@@ -21,8 +21,11 @@
 @endif
 
 <h2>Comments:</h2>
-<form action="/create-comment" method="post">
-    <textarea id="comment" name="comment" placeholder="Comment"></textarea><br>
+<form action="/create-comment/{{ $design->id }}" method="post">
+    @csrf
+    <input type="text" id="title" name="title" placeholder="Title"><br>
+    <textarea id="body" name="body" placeholder="Comment"></textarea><br>
+    <input type="number" id="rating" name="rating" placeholder="Rating" min=0 max=5><br>
     <button type="submit">Submit</button>
 </form>
 @foreach ($design->comments as $comment)
@@ -31,6 +34,13 @@
     <p>{{ $comment->body }}</p>
     <p>By: {{ $comment->user->name }}</p>
     <p>Created at: {{ $comment->created_at }}</p>
+    @if ($comment->user_id == auth()->user()->id)
+        <form action="/delete-comment/{{ $comment->id }}" method="post">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Delete</button>
+        </form>
+    @endif
     <hr>
 @endforeach
 
