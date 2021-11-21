@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DesignController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TransactionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,8 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'], ['middleware' => 'auth']);
 
 Route::get('/profile', [DesignController::class, 'index'], ['middleware' => 'auth']);
+
+Route::get('/transactions', [TransactionController::class, 'index'], ['middleware' => 'auth']);
+Route::get('/create-transaction/{design}', [TransactionController::class, 'create'], ['middleware' => 'auth']);
+Route::get('/pay-transaction/{transaction}', [TransactionController::class, 'pay'], ['middleware' => 'auth']);
+Route::delete('/delete-transaction/{transaction}', [TransactionController::class, 'destroy'], ['middleware' => 'auth']);

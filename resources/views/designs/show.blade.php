@@ -16,9 +16,15 @@
         @method('DELETE')
         <button type="submit">Delete</button>
     </form>
+@else
+    <a href="/create-transaction/{{ $design->id }}">Buy</a>
 @endif
 
 <h2>Comments:</h2>
+<form action="/create-comment" method="post">
+    <textarea id="comment" name="comment" placeholder="Comment"></textarea><br>
+    <button type="submit">Submit</button>
+</form>
 @foreach ($design->comments as $comment)
     <h3>{{ $comment->title }}</h3>
     <h4>Rating: {{ $comment->rating }}</h4>

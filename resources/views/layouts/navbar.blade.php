@@ -8,6 +8,9 @@
         </li>
         @auth
             <li>
+                <a href='/transactions'>Transactions</a>
+            </li>
+            <li>
                 <a href='/profile'>{{ auth()->user()->name }}</a>
             </li>
             <form action="/logout" method="post">

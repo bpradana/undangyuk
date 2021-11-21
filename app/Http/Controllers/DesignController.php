@@ -10,7 +10,7 @@ class DesignController extends Controller
 {
     public function indexAll()
     {
-        $designs = Design::all();
+        $designs = Design::latest()->get();
         return view('designs.index', compact('designs'), ['title' => 'Designs']);
     }
 
