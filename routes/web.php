@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\MessageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +47,9 @@ Route::delete('/delete-transaction/{transaction}', [TransactionController::class
 
 Route::post('/create-comment/{design}', [CommentController::class, 'create'], ['middleware' => 'auth']);
 Route::delete('/delete-comment/{comment}', [CommentController::class, 'destroy'], ['middleware' => 'auth']);
+
+Route::get('/messages', [MessageController::class, 'index'], ['middleware' => 'auth']);
+Route::get('/message/{message}', [MessageController::class, 'show'], ['middleware' => 'auth']);
+
+Route::get('/admin', [MessageController::class, 'create'], ['middleware' => 'auth']);
+Route::post('/create-message', [MessageController::class, 'store'], ['middleware' => 'auth']);
