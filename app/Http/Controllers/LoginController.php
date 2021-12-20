@@ -25,7 +25,7 @@ class LoginController extends Controller
             return redirect()->intended('/');
         }
         else {
-            return redirect()->back()->withErrors(['loginError' => 'Wrong login credentials!']);
+            return redirect()->back()->withErrors(['loginError' => 'Username atau Password yang dimasukkan salah!']);
         }
     }
 

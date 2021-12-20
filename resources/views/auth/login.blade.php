@@ -10,7 +10,7 @@
     <input type="password" id="password" name="password" placeholder="Password"><br>
     <button type="submit">Login</button>
 </form>
-<p>Don't have account? <a href="/register">Register</a></p>
+<p>Tidak punya akun? <a href="/register">Register</a></p>
 
 @error('loginError')
     <p>{{ $message }}</p>
