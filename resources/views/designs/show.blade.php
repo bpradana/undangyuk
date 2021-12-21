@@ -1,7 +1,7 @@
 @extends('layouts.main', ['title' => $title])
 
 @section('content')
-
+<img src="{{asset('assets/img/gambar1depan.jpg')}}" alt=""/>
 <h1>{{ $design->title }}</h1>
 <h2>Price: {{ $design->price }}</h2>
 <h2>Rating: {{ $design->rating }}</h2>
