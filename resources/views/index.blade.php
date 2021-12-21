@@ -32,42 +32,42 @@
         <!-- Your content here -->
         <div class="card medium">
             <div class="card-image">
-            <img src="https://picsum.photos/200" alt=""/>
+            <img src="{{asset('assets/img/gambar1depan.jpg')}}" alt=""/>
             <span class="card-title"></span>
             </div>
             <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
+            <p>Jenis desain undangan pernikahan seperti ini dapat menjadi inspirasi Anda. Bahkan, Anda dapat menyesuaikan dengan konsep yang sudah ditentukan. Desain yang dihasilkan juga terbilang elegan dan simple, sehingga dapat menyampaikan informasi dengan lebih lengkap.</p>
             </div>
             <div class="card-action">
-            <a href="#" class="pink-text">This is a link</a>
+            <a href="/design/1" class="pink-text">Lihat</a>
             </div>
         </div>
         </div><div class="col s12 m4 l4">
         <!-- Your content here -->
         <div class="card medium">
             <div class="card-image">
-            <img src="https://picsum.photos/200" alt=""/>
+            <img src="{{asset('assets/img/gambar2depan.jpg')}}" alt=""/>
             <span class="card-title"></span>
             </div>
             <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
+            <p>Anda dapat juga menggunakan undangan pernikahan dengan desain seperti gambar di atas. Menggunakan aksesoris pita dan gambar daun akan menambah kesan natural. Terutama jika Anda mengusung konsep pernikahan fairy tale, desain seperti ini sangat cocok digunakan.</p>
             </div>
             <div class="card-action">
-            <a href="#" class="pink-text">This is a link</a>
+            <a href="/design/2" class="pink-text">Lihat</a>
             </div>
         </div>
         </div><div class="col s12 m4 l4">
         <!-- Your content here -->
         <div class="card medium">
             <div class="card-image">
-            <img src="https://picsum.photos/200" alt=""/>
+            <img src="{{asset('assets/img/gambar3depan.jpg')}}" alt=""/>
             <span class="card-title"></span>
             </div>
             <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
+            <p>Jika Anda dan pasangan mengusung tema pernikahan seperti keluarga kerajaan, dapat menggunakan desain undangan tersebut. Meski terlihat sederhana dan vintage, tapi tidak kalah elegan dengan desain-desain undangan lainnya.</p>
             </div>
             <div class="card-action">
-            <a href="#" class="pink-text">This is a link</a>
+            <a href="/design/3" class="pink-text">Lihat</a>
             </div>
         </div>
         </div>
