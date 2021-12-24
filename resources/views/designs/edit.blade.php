@@ -10,7 +10,7 @@
     <textarea id="description" name="description" placeholder="Description">{{ $design->description }}</textarea><br>
     <label for="price">Price</label>
     <input type="number" id="price" name="price" placeholder="Price" value="{{ $design->price }}"><br>
-    <button type="submit">Submit</button>
+    <button class="btn pink accent-4" type="submit">Submit</button>
 </form>
 
 @endsection

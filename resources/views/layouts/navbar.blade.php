@@ -1,5 +1,5 @@
 <nav>
-    <a href="/" class="brand-logo"><b>UndangYuk!</b></a>
+    <a href="/" class="brand-logo center"><b>UndangYuk!</b></a>
     <div class="container">
         
         <div class="nav-wrapper">
@@ -24,12 +24,12 @@
                     <li id="nav-mobile" class="right hide-on-med-and-down">
                         <form action="/logout" method="post">
                             @csrf
-                            <button type="submit">Logout</button>
+                            <button class="btn pink accent-4" type="submit">Logout</button>
                         </form>
                     </li>
                 @else
                     <li id="nav-mobile" class="right hide-on-med-and-down">
-                        <a href="/login" class="waves-effect waves-light btn blue">Log in</a>
+                        <a href="/login" class="waves-effect waves-light btn pink accent-4">Log in</a>
                     </li>
                 @endauth
             </ul>
