@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col s6">
-        <img class="responsive-img" src="{{asset('assets/img/gambar1depan.jpg')}}" alt=""/>
+        <img class="responsive-img" src="{{ asset('assets/img/'.$design->product_img) }}" alt=""/>
     </div>
     <div class="col s6">
         <h1>{{ $design->title }}</h1>
