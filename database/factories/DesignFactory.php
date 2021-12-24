@@ -19,6 +19,7 @@ class DesignFactory extends Factory
             'description' => $this->faker->paragraph,
             'price' => $this->faker->numberBetween(1, 100),
             'rating' => $this->faker->numberBetween(1, 5),
+            'product_img' => $this->faker->image('public/assets/img',640,480, null, false)
         ];
     }
 }
